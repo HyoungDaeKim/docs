@@ -1,3 +1,13 @@
+### java
+```
+sudo apt update
+sudo apt install unzip
+sudo apt install zip
+curl -s "https://get.sdkman.io" | bash
+source "$HOME/.sdkman/bin/sdkman-init.sh"
+sdk list java
+sdk install java 11.0.3.hs-adpt
+```
 ### wsl
 * root / root
 * ubuntu / ubuntu
@@ -58,7 +68,7 @@ kubectl port-forward <your pod name> 5005:5005
 kubectl exec cas-auth-b77dd4979-7nx76 -it -- bash
 
 kubectl delete service cas-auth
-kubectl apply -f k8s/nodeport.yaml
+kubectl apply -f k8s/service.yaml
 
 minikube service cas-auth
 
